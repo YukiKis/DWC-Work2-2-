@@ -1,0 +1,19 @@
+<div class="contaienr">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="notice">
+        <% if notice %>
+          <%= notice %>
+        <% end %>
+      </div>
+
+      <div class="book-show">
+        <p>Title: <%= @book.title %></p>
+        <p>Body: <%= @book.body %></p>
+        <span><%= link_to "Edit", edit_book_path(@book.id) %> | <%= link_to "Back", books_path %></span>
+      </div>
+
+    </div>
+  </div>
+</div>

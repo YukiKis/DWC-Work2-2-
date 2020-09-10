@@ -1,0 +1,21 @@
+<div class="contaienr">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <section class="book-edit">
+        <h1>Editing Book</h1>
+        <%= form_with model: @book, local: true do |f| %>
+          <div class="form-group">
+            <%= f.label :title, class: "control-label" %><br>
+            <%= f.text_field :body, class: "form-control" %><br>
+            <%= f.label :body, class: "control-label" %><br>
+            <%= f.text_area :body, class: "form-control" %><br>
+            <%= f.submit "Update Book", class: "btn btn-default" %>
+          </div>
+        <% end %>
+        <span><%= link_to "Show", book_path(@book.id) %> | <%= link_to "Back", books_path %></span>
+      </section>
+
+    </div>
+  </div>
+</div>
